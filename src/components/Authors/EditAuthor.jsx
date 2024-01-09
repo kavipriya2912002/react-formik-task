@@ -37,7 +37,7 @@ function EditAuthor() {
       values.id = id
       try {
         
-        let res = await ApiService.put(`/Formik_Task_json/${id}`,values)
+        let res = await ApiService.put(`/ReactFormik/${id}`,values)
         if(res.status === 200){
           navigate('/dashboard-author')
         }
@@ -50,7 +50,7 @@ function EditAuthor() {
   const getAuthorDataById = async() => {
     let {id} = params
     try {
-      let res = await ApiService.get(`/Formik_Task_json/${id}`)
+      let res = await ApiService.get(`/ReactFormik/${id}`)
       if(res.status===200){
         console.log(res.data);
         setValues({ 

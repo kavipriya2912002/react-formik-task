@@ -44,7 +44,7 @@ function EditBook() {
       values.id = id
       try {
         
-        let res = await ApiService.put(`/Formik_Task_json/${id}`,values)
+        let res = await ApiService.put(`/ReactFormik/${id}`,values)
         if(res.status === 200){
           navigate('/')
         }
@@ -57,7 +57,7 @@ function EditBook() {
   const getBookdataById = async() => {
     let {id} = params
     try {
-      let res = await ApiService.get(`/Formik_Task_json/${id}`)
+      let res = await ApiService.get(`/ReactFormik/${id}`)
       if(res.status===200){
         console.log(res.data);
         setValues({ 
