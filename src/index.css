@@ -1,0 +1,19 @@
+*{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+#top{
+    background-color: rgb(243, 173, 187) !important;
+    display: flex;
+    flex-direction: row;
+    padding-left: 100px;
+    padding-right: 200px;
+
+}
+.dash-container{
+    border-radius: 20px;
+    background-color: rgb(231, 208, 213);
+    margin-top: 20px;
+}

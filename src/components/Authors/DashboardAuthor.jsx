@@ -19,7 +19,7 @@ function DashboardAuthor() {
   const getAuthorData = async() => {
     try {
       let res = await ApiService.get('/ReactFormik')
-      // console.log(res);
+     
       if(res.status === 200){
         setAuthorData(res.data)
       }
@@ -31,7 +31,7 @@ function DashboardAuthor() {
   const handleDelete = async(id) => {
     try {
       let res = await ApiService.delete(`/ReactFormik/${id}`)
-      // console.log(res);
+      
       if(res.status === 200){
         getAuthorData();
       }
@@ -42,9 +42,9 @@ function DashboardAuthor() {
 
   return <>
     <Topbar/>
-    <Container>
+    <Container className='dash-container'>
     <Container className="d-flex justify-content-center align-items-center flex-column" >
-      <Button className='mt-3' variant='success' onClick={()=>navigate(`/add-author`)}>Add Author</Button>
+      <Button className='mt-3' onClick={()=>navigate(`/add-author`)}>Add Author</Button>
     </Container>
       <Row className='d-flex justify-content-start flex-row'>
       <div className='mt-3'>
@@ -68,7 +68,7 @@ function DashboardAuthor() {
                           <td>{e.date}</td>
                           <td>{e.bio}</td>
                           <td>
-                            <Button variant='primary' onClick={()=>navigate(`/edit-author/${e.id}`)}>Edit</Button>
+                            <Button onClick={()=>navigate(`/edit-author/${e.id}`)}>Edit</Button>
                             &nbsp;
                             <Button variant='danger' onClick={()=>{handleDelete(e.id)}}>Delete</Button>
                           </td>

@@ -35,7 +35,7 @@ function AddBook() {
       date : Yup.string().required("Date cannot be empty")
     }) ,
     onSubmit : async(values) => {
-      // console.log(values);
+      
       try {
         let res = await ApiService.post('/ReactFormik',values)
         if(res.status === 201){

@@ -9,14 +9,14 @@ function Topbar() {
 
     return (
         <>
-            <Navbar expand="md" className="bg-success">
+            <Navbar expand="md" className="bg-success" id='top'>
                 <Container fluid>
                     <Navbar.Brand onClick={() => navigate('/')}><b>Library Management System</b></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
-                            <Nav.Link onClick={() => navigate('/')}><b>Book Dashboard</b></Nav.Link>
-                            <Nav.Link onClick={() => navigate('/dashboard-author')}><b>Authors Dashboard</b></Nav.Link>                        
+                            <Nav.Link onClick={() => navigate('/')}>Book Dashboard</Nav.Link>
+                            <Nav.Link onClick={() => navigate('/dashboard-author')}>Authors Dashboard</Nav.Link>                        
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

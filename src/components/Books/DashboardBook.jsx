@@ -41,9 +41,8 @@ function DashboardBook() {
   const renderCards = () => {
     return bookData.map((e, i) => (
       <Col key={i} xs={12} md={4} className='mb-4'>
-        <Card style={{
-            boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px',
-              }}>          
+        <Card 
+              >          
             <Card.Body>
             <Card.Title>
               <strong>Title :</strong> {e.title}
@@ -62,7 +61,7 @@ function DashboardBook() {
             </Card.Text>
           </Card.Body>
           <Card.Footer className="text-right justify-content-end">
-            <Button variant='primary' onClick={() => navigate(`/edit-book/${e.id}`)}>
+            <Button onClick={() => navigate(`/edit-book/${e.id}`)}>
               Edit
             </Button>
             &nbsp;
@@ -78,9 +77,9 @@ function DashboardBook() {
   return (
     <>
       <Topbar /><br/>
-      <Container  style={{ backgroundColor: '#93F5A4' }}>
+      <Container  className='dash-container' style={{ backgroundColor: 'rgb(231, 208, 213)' }}>
       <Container className="d-flex justify-content-center align-items-center flex-column" >
-        <Button className='mt-3' variant='success' onClick={() => navigate(`/add-book`)}>
+        <Button className='mt-3' onClick={() => navigate(`/add-book`)}>
           Add Book
         </Button>
       </Container><br/>

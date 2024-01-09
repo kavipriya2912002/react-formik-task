@@ -32,11 +32,11 @@ function EditAuthor() {
     }) ,
     enableReinitialize: true,
     onSubmit : async(values) => {
-      // console.log(values);
+      
       let {id} = params
       values.id = id
       try {
-        // console.log(values);
+        
         let res = await ApiService.put(`/Formik_Task_json/${id}`,values)
         if(res.status === 200){
           navigate('/dashboard-author')
